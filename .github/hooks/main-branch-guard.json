@@ -1,0 +1,13 @@
+{
+	"version": 1,
+	"hooks": {
+		"preToolUse": [
+			{
+				"type": "command",
+				"matcher": "Bash|bash|PowerShell|powershell",
+				"powershell": "& (Join-Path ((git rev-parse --show-toplevel).Trim()) '.github/hooks/scripts/main-branch-guard.ps1')",
+				"timeoutSec": 10
+			}
+		]
+	}
+}

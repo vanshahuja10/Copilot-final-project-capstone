@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d35">
+  <title>My Tasks</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="./" aria-label="My tasks">todo<span>.</span></a>
+    <span class="list-label">ONE LIST</span>
+  </header>
+
+  <main class="workspace">
+    <section class="page-heading" aria-labelledby="page-title">
+      <p class="eyebrow">PERSONAL TASKS</p>
+      <h1 id="page-title">My tasks</h1>
+      <p id="task-count" class="task-count" aria-live="polite">0 tasks</p>
+    </section>
+
+    <div class="content-layout">
+      <section class="tasks-section" aria-labelledby="tasks-heading">
+        <div class="section-heading">
+          <h2 id="tasks-heading">All tasks</h2>
+          <span class="section-rule" aria-hidden="true"></span>
+        </div>
+        <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+        <p id="empty-state" class="empty-state">Nothing here yet.</p>
+      </section>
+
+      <aside class="add-panel" aria-labelledby="add-heading">
+        <p class="eyebrow">NEW ITEM</p>
+        <h2 id="add-heading">Add a task</h2>
+        <form id="task-form">
+          <label for="task-title">Task title</label>
+          <input id="task-title" name="title" type="text" placeholder="Write a task" required autocomplete="off">
+          <button class="add-button" type="submit">Add task <span aria-hidden="true">+</span></button>
+        </form>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

@@ -6,5 +6,6 @@
 - Maintain traceability across artifacts by linking requirements, decisions, designs, implementation, and verification evidence.
 - Never expose, commit, or reproduce secrets. Use approved secure handling for credentials and sensitive values.
 - Never work directly on `main`. Perform all development work on the designated feature branch. The final pull request must target `main`.
+- Use GitHub MCP tools for GitHub repository and pull request operations; do not use GitKraken as a fallback. If GitHub MCP is unavailable or unauthenticated, pause and ask the human to restore access; never request credentials in chat and while raising the pr in heading mention that it is by github copilot.
 - Report verification accurately: claim a check passed only when it was run and passed. State unverified items, failures, and blockers plainly.
 - Do not modify an already approved phase artifact unless the current phase identifies a necessary change and human approval is obtained.

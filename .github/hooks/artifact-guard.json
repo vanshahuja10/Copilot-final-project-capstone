@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "matcher": "Edit|Write|edit|write",
+        "powershell": "& (Join-Path ((git rev-parse --show-toplevel).Trim()) '.github/hooks/scripts/artifact-guard.ps1')",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}
